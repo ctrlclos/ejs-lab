@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <%-include('./partials/nav')%>
+  <h1>Full Menu</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Rating</th>
+      <th>Details</th>
+    </tr>
+    <%-include('./partials/menu-category-section', {menuItems: mains, category: categoryNames.mains})%>
+    <%-include('./partials/menu-category-section', {menuItems: deserts, category: categoryNames.desserts})%>
+    <%-include('./partials/menu-category-section', {menuItems: sides, category: categoryNames.sides})%>
+  </table>
+</body>
+</html>

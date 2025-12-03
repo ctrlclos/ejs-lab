@@ -1,0 +1,28 @@
+<%if (menuItems && menuItems.length > 0) {%>
+  <tr>
+    <td colspan="4">
+      <h2><%=category%></h2>
+    </td>
+  </tr>
+<%}%>
+
+<%menuItems.forEach((menu) => {%>
+<tr>
+  <td>
+    <%if(menu.rating >= 5) {%>
+    <%=menu.name + ' ⭐️'%>
+    <%} else {%>
+    <%=menu.name%>
+    <%}%>
+  </td>
+  <td>
+    <%=menu.price%>
+  </td>
+  <td>
+    <%=menu.rating%>
+  </td>
+  <td>
+    <%=menu.details%>
+  </td>
+</tr>
+<%});%>
