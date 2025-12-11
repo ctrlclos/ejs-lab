@@ -8,7 +8,13 @@
 <body>
   <%- include('./partials/nav')%>
   <h1>Home Page</h1>
-  <%- include('./partials/restaurant-info') %>
-  <%- include('./partials/opening-information')%>
+  <%=restaurant.name%>
+  <%=restaurant.address%>
+  <%=restaurant.phone%>
+  <%if(restaurant.isOpen === true){%>
+    <h1>Yes, we are open.</h1>
+  <%} else {%>
+    <h1>Sorry, we are closed.</h1>
+  <%}%>
 </body>
 </html>

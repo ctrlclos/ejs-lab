@@ -87,16 +87,7 @@ app.get('/menu/:category', (req, res) => {
 })
 
 const upperCaseWord = (word) => {
-  const firstLetterInWord = word.charAt(0).toUpperCase();
-  let newWord;
-  newWord = word.split('').forEach((letter, index) => {
-    if(index == 0) {
-      newWord = newWord + firstLetterInWord
-    } else {
-      newWord = newWord + letter;
-    }
-  })
-  return newWord;
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 app.listen(3000);
